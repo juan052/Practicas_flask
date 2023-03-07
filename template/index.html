@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block body %}
+<main class="container">
+    <h2>Vuelos</h2>
+    <ul>
+        {% for flights in flights %}
+        <li>{{ flights.origin }}</li>
+        <li>{{ flights. destination }}</li>
+        <li>{{ flights.duration }}</li>
+        {% else %}
+        <li>No hay vuevlos en el sistema.</li>
+        {% endfor %}
+    </ul>
+</main>
+
+
+
+
+{% endblock %}
